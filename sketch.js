@@ -188,23 +188,20 @@ function onResults(results) {
     inputs.push(y);
   }
   brain.classify(inputs, gotResult);
-
+  canvasCtx.font = "50px Arial";
+  canvasCtx.fillStyle = '#00FF00';
+  canvasCtx.fillText(poseLabel, 30, 50);
   canvasCtx.restore();
 
 
 }
 
 function gotResult(error, results) {
-
   if (results[0].confidence > 0.75) {
-    poseLabel = results[0].label;
-    canvasCtx.font = "50px Arial";
-    canvasCtx.fillStyle = '#00FF00';
-    if (poseLabel ==3)canvasCtx.fillText("else", 30, 50);
-    else if (poseLabel ==1)canvasCtx.fillText("correct", 30, 50);
-    else if (poseLabel ==2)canvasCtx.fillText("wrong", 30, 50);
+    if (results[0].label ==3) poseLabel = "else";
+    else if (results[0].label ==1) poseLabel = "correct";
+    else if (results[0].label ==2)poseLabel = "wrong";
   }
-
  // classifyPose();
 }
 
