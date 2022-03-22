@@ -225,7 +225,7 @@ const camera = new Camera(videoElement, {
 
     await pose.send({image: videoElement});
   },
-  width: 1280,
-  height: 720
+   width: 640,
+  height: 480
 });
 camera.start();
