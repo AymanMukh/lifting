@@ -95,8 +95,8 @@ function onResults(results) {
 
   let inputs = [];
   for (let i = 0; i < results.poseLandmarks.length; i++) {
-    let x = results.poseLandmarks[i].x-results.poseLandmarks[60].x;
-    let y = results.poseLandmarks[i].y-results.poseLandmarks[60].y;
+    let x = results.poseLandmarks[i].x-results.poseLandmarks[30].x;
+    let y = results.poseLandmarks[i].y-results.poseLandmarks[30].y;
     inputs.push(x);
     inputs.push(y);
   }
