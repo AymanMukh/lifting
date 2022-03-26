@@ -111,9 +111,9 @@ function onResults(results) {
 
 function gotResult(error, results) {
   if (results[0].confidence > 0.75) {
-    if (results[0].label ==0) poseLabel = "bad";
-    else if (results[0].label ==1) poseLabel = "correct";
-    else if (results[0].label ==2)poseLabel = "else";
+    if (results[0].label ==1) poseLabel = "bad";
+    else if (results[0].label ==2) poseLabel = "correct";
+    else if (results[0].label ==3)poseLabel = "else";
   }
  // classifyPose();
 }
