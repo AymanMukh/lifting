@@ -134,12 +134,34 @@ let brain;
 let poseLabel="";
 
 function setup() {
-
   let options = {
     inputs: 66,
     outputs: 3,
     task: 'classification',
-    debug: true
+    debug: true,
+    layers: [
+        {
+          type: 'dense',
+          units: 66,
+
+        },
+        {
+          type: "batchNormalization",
+        },
+        {
+          type: 'dense',
+          units: 50,
+
+        },
+        {
+          type: "batchNormalization",
+        },
+        {
+          type: 'dense',
+          activation: 'softmax',
+        },
+      ],
+
   }
   brain = ml5.neuralNetwork(options);
   const modelInfo = {
@@ -198,7 +220,7 @@ function onResults(results) {
 
 function gotResult(error, results) {
   if (results[0].confidence > 0.75) {
-    if (results[0].label ==3) poseLabel = "wrong";
+    if (results[0].label ==0) poseLabel = "bad";
     else if (results[0].label ==1) poseLabel = "correct";
     else if (results[0].label ==2)poseLabel = "else";
   }
@@ -225,7 +247,7 @@ const camera = new Camera(videoElement, {
 
     await pose.send({image: videoElement});
   },
-   width: 640,
+  width: 640,
   height: 480
 });
 camera.start();
