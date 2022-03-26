@@ -102,7 +102,10 @@ function onResults(results) {
   }
   brain.classify(inputs, gotResult);
   canvasCtx.font = "50px Arial";
-  canvasCtx.fillStyle = '#00FF00';
+ 
+  if (poseLabel=="correct") canvasCtx.fillStyle = '#00FF00';
+  else if (poseLabel=="bad") canvasCtx.fillStyle = '#FF0000';
+  else if (poseLabel=="else") canvasCtx.fillStyle = '#0000FF';
   canvasCtx.fillText(poseLabel, 30, 50);
   canvasCtx.restore();
 
