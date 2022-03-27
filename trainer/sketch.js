@@ -18,10 +18,33 @@ function setup() {
         inputs: 66,
         outputs: 3,
         task: 'classification',
-        debug: true
+        debug: true,
+        layers: [
+            {
+                type: 'dense',
+                units: 66,
+
+            },
+            {
+                type: "batchNormalization",
+            },
+            {
+                type: 'dense',
+                units: 50,
+
+            },
+            {
+                type: "batchNormalization",
+            },
+            {
+                type: 'dense',
+                activation: 'softmax',
+            },
+        ],
+        learningRate: 0.0005,
     }
     brain = ml5.neuralNetwork(options);
-    brain.loadData('2022-3-22_17-53-0.json', dataReady);
+   // brain.loadData('2022-3-26_17-58-17.json', dataReady);
 }
 
 document.getElementById('inputfile')
@@ -34,14 +57,9 @@ document.getElementById('inputfile')
     });
 
 
-
-function train() {
-
-}
-
 function dataReady() {
  // brain.normalizeData();
-  brain.train({epochs: 50}, finished);
+  brain.train({epochs: 700}, finished);
 }
 
 function finished() {
