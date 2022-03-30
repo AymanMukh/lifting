@@ -1,24 +1,24 @@
 <!DOCTYPE html><html><head>
 
-  <script src="ml5.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta charset="utf-8">
+    <script src="ml5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-  <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.2/landmark_grid.css" crossorigin="anonymous">
-  <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.2/landmark_grid.css" crossorigin="anonymous">
+    <meta charset="utf-8">
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.2/control_utils_3d.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.4/pose.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.2/control_utils_3d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.4/pose.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -27,15 +27,28 @@
 <h2 style="text-align: center;"><span style="color: #000000;">Heavy Lifting Helper</span></h2>
 <h2>&nbsp;</h2>
 <p style="font-size: 1.5em; text-align: center;"><span style="color: #000000;">This tool will help you lift heavy weights correctly. Please enable the camera for this website to be able to use the tool. </span></p>
-<p style="font-size: 1.5em; text-align: center;"><span style="color: #000000;">After the camera is initialized, you can start lifting. Please stand 2-3 meters away from the camera with your side facing the cam. You should see a real-time prediction of your poster. The prediction will be displayed as text on the left side of your streaming video.</span></p>
 <p>&nbsp;</p>
 <div class="container">
-  <video class="input_video" style="display: block; margin-left: auto; margin-right: auto;"></video>
-  <canvas class="output_canvas" style="display: block; margin-left: auto; margin-right: auto;" width="640px" height="480px"></canvas>
+    <video class="input_video" style="display: block; margin-left: auto; margin-right: auto;"></video>
+    <canvas class="output_canvas" style="display: block; margin-left: auto; margin-right: auto;" width="640px" height="480px"></canvas>
 </div>
 <div class="control-panel">
 </div>
-  <script src="sketch.js"></script>
+
+<div class="container2">
+    <p style="font-size: 1.5em; text-align: left;"><span style="color: #000000;"><strong>How to run</strong>: After the camera is initialized, please stand 2-3 meters away from the camera with your side facing the cam. You should see a real-time prediction of your poster. The prediction will be displayed as text on the left side of your streaming video. Examples are given below:</span></p>
+    <p style="font-size: 1.5em; text-align: left;">&nbsp;<img src="test.PNG" alt="1" width="300" height="300" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img src="test2.PNG" alt="2" width="300" height="300" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img src="test3.PNG" alt="2" width="300" height="300" /></p>
+    <p style="font-size: 1.5em; text-align: left;">&nbsp;</p>
+    <p style="font-size: 1.5em; text-align: left;">&nbsp;</p>
+    <p style="font-size: 1.5em; text-align: left;">&nbsp;</p>
+    <p style="font-size: 1.5em; text-align: left;">&nbsp;</p>
+    <p style="font-size: 1.5em; text-align: left;">&nbsp;</p>
+    <p style="font-size: 1.5em; text-align: left;">&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+
+
+<script src="sketch.js"></script>
 
 
 </body></html>
